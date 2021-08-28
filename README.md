@@ -9,6 +9,7 @@
 - [Aman Kumar](https://github.com/aman0710)
 - [Ishaan Puri](https://github.com/ishu-2201)
 - [Ajay Kumar Yadav](https://github.com/AJAY007L)
+
 # OHLC Engine
 
 We have created a dashboard based on which users would be able to analyze the sentiment of a specific stock. 
