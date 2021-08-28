@@ -1,5 +1,7 @@
 
-![Logo](https://givebutter.s3.amazonaws.com/profiles/OFZClUNWGdolNqMnhUnvgXoYhUJK0XFJ6C22Vk63.png)
+![Logo](https://avatars.githubusercontent.com/u/2536284?s=280&v=4)
+
+
 ## Team Members
 
 - [Aihab Umair](https://github.com/Aihab1) 
@@ -9,15 +11,34 @@
 - [Ajay Kumar Yadav](https://github.com/AJAY007L)
 # OHLC Engine
 
-1. It offers users a ability to search the different stocks based on the symbols and view the chart.
+We have created a dashboard based on which users would be
+able to analyze the sentiment of a specific stock. 
 
-2. Users should be able to view the history of their searches.
+We have used the 'Stock List' dataset which was given to us 
+and used its data to create an "OHLC" (Open/High?Low/Close) 
+engine.
 
-3. Users should have ability to switch between OHLC, Candlestick charts, Colored Bar, Vertex Line and Hollow Candle. 
+**Functionalities of the project:**
+- User scan search different stocks based on the symbols and view the chart.
+- Users can view the history of their searches.
+- Users have the ability to switch between OHLC, Candlestick charts, Colored Bar, Vertex Line and Hollow Candle.
+## Tech Stack
 
+**Client:** HTML, CSS, React.js 
 
+**Server:** Node.js
 
+**Data Structures:** Arrays, Strings, HashMap, Objects
+  
+**Charting Library:** react-stockcharts
 
+## Modules 
+1. **Sub-Module-1(Reader)** : Reads the ‘Stock List’ data input (line by line from JSON), and sends the packet to the FSM (Finite-State-Machine) module.
+
+2. **Sub-Module-2(FSM)** : FSM computes OHLC packets based on intervals and constructs 'BAR' chart data, based on timestamp.
+
+3. **Sub-Module-3(Web Service)** : Client requests from Dashboard come here. Publishes (transmits) the BAR OHLC data as computed in real time.
+ 
 ## Run Locally
 
 Clone the project
@@ -44,23 +65,4 @@ Start the server
   npm run start
 ```
 
-  
-## Modules 
-1. **Sub-Module-1(Reader)** : Reads the ‘Stock List’ data input (line by line from JSON), and sends the packet to the FSM (Finite-State-Machine) module.
-
-2. **Sub-Module-2(FSM)** : FSM computes OHLC packets based on intervals and constructs 'BAR' chart data, based on timestamp.
-
-3. **Sub-Module-3(Web Service)** : Client requests from Dashboard come here. Publishes (transmits) the BAR OHLC data as computed in real time.
- 
-
-
-## Tech Stack
-
-**Server:** Node
-
-**Frontend:** React.js
-
-**Additional Libraries:** react-stockcharts,
-
-**Data Structures:** Arrays, Strings, HashMap, Objects
   
