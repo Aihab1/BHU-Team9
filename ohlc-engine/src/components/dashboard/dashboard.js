@@ -2,8 +2,11 @@ import React from 'react';
 import Drawer from '../drawer/drawer'
 import Navbar from '../navbar/navbar'
 import * as classes from './dashboard.module.css'
+import { hashedData } from '../../library/modules/reader/reader'
 
 const dashboard = () => {
+    // Work on hashedData
+    console.log(hashedData)
     return (
         <div className={classes.outerDiv}>
             <Drawer />
