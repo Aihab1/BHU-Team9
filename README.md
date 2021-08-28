@@ -19,7 +19,7 @@ We have used the 'Stock List' dataset which was given to us and used its data to
 - User scan search different stocks based on the symbols and view the chart.
 - Users can view the history of their searches.
 - Users have the ability to switch between OHLC, Candlestick charts, Colored Bar, Vertex Line and Hollow Candle.
-# Tech Stack
+## Tech Stack
 
 **Client:** HTML, CSS, React.js 
 
@@ -29,14 +29,14 @@ We have used the 'Stock List' dataset which was given to us and used its data to
   
 **Charting Library:** react-stockcharts
 
-# Modules 
+## Modules 
 1. **Sub-Module-1(Reader)** : Reads the ‘Stock List’ data input (line by line from JSON), and sends the packet to the FSM (Finite-State-Machine) module.
 
 2. **Sub-Module-2(FSM)** : FSM computes OHLC packets based on intervals and constructs 'BAR' chart data, based on timestamp.
 
 3. **Sub-Module-3(Web Service)** : Client requests from Dashboard come here. Publishes (transmits) the BAR OHLC data as computed in real time.
  
-# Run Locally
+## Run Locally
 
 Clone the project
 
