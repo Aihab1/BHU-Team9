@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import Drawer from '../drawer/drawer'
 import Navbar from '../navbar/navbar'
-import ChartComponent from '../chart/Chart'
+import ChartComponent from '../chart/index'
 import * as classes from './dashboard.module.css'
 import { hashedData } from '../../library/modules/reader/reader'
 
 const Dashboard = () => {
     // Work on hashedData
-    //console.log(hashedData)
+    // console.log(hashedData)
     let searchTerms = Object.keys(hashedData)
     const [result, setResult] = useState([]);
     const [chart, setChart] = useState(<div></div>);
