@@ -49,6 +49,7 @@ Go to the project directory
 
 ```bash
   cd BHU-Team9
+  cd ohlc-engine
 ```
 
 Install dependencies
