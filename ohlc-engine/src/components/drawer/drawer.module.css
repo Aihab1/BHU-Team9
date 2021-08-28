@@ -1,0 +1,36 @@
+.drawerOuter {
+    min-height: 100vh;
+    height: 100%;
+    background: #0a192f;
+    color: white;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.drawerOuter h2{
+    padding: 15px;
+}
+
+.tab svg {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    color: white;
+    fill: #64ffda;
+    transform: translateY(-10%);
+}
+.tab {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background: #233554;
+    margin: 5px 0;
+    border-left: 2px solid #64ffda;
+}
+
+
+.tab:hover {
+    background: #112240;
+}
