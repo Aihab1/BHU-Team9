@@ -6,12 +6,14 @@ import { hashedData } from '../../library/modules/reader/reader'
 
 const Dashboard = () => {
     // Work on hashedData
-    //console.log(hashedData)
+    console.log(hashedData)
     let searchTerms = Object.keys(hashedData)
-    let [result, setResult] = useState([]);
-    let [chart, setChart] = useState(<div></div>);
+    const [result, setResult] = useState([]);
+    const [chart, setChart] = useState(<div></div>);
+    const [searchHistory, setSearchHistory] = useState([]);
 
     const chartChangedHandler = (symbol) => {
+        setSearchHistory(...searchHistory, symbol);
         // Work with symbol like this
         // setChart(<YourChartComponent symbol={symbol} hashedData={hashedData}/>)
         //console.log(symbol)
@@ -42,7 +44,7 @@ const Dashboard = () => {
 
     return (
         <div className={classes.outerDiv}>
-            <Drawer />
+            <Drawer searchHistory={searchHistory}/>
             <div className={classes.dashboard}>
                 <Navbar />
                 <div className={classes.innerDash}>
