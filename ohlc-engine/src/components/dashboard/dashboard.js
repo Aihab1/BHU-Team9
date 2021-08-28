@@ -1,12 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Drawer from '../drawer/drawer'
 import Navbar from '../navbar/navbar'
 import * as classes from './dashboard.module.css'
 import { hashedData } from '../../library/modules/reader/reader'
 
-const dashboard = () => {
+const Dashboard = () => {
     // Work on hashedData
-    console.log(hashedData)
+    //console.log(hashedData)
+    let searchTerms = Object.keys(hashedData)
+    let [result, setResult] = useState([]);
+    let [chart, setChart] = useState(<div></div>);
+
+    const chartChangedHandler = (symbol) => {
+        // Work with symbol like this
+        // setChart(<YourChartComponent symbol={symbol} hashedData={hashedData}/>)
+        //console.log(symbol)
+    }
+
+    const autocompleteMatch = (input) => {
+        if (input === '') {
+            return [];
+        }
+        input = input.toUpperCase()
+        let reg = new RegExp(input)
+        return searchTerms.filter((term) => {
+            if (term.match(reg)) {
+                return term;
+            }
+            return null
+        });
+    }
+
+    const onTypeHandler = (val) => {
+        let terms = autocompleteMatch(val);
+        let list = [];
+        for (let i = 0; i < terms.length; i++) {
+            list.push(terms[i]);
+        }
+        setResult(list);
+    }
+
     return (
         <div className={classes.outerDiv}>
             <Drawer />
@@ -18,7 +51,7 @@ const dashboard = () => {
                             <h1>Good Morning.</h1>
                             <p>Here's what's going on with stocks today.</p>
                             <div className={classes.filter}>
-                                <input placeholder="Search"></input>
+                                <input placeholder="Search" onChange={(event) => onTypeHandler(event.target.value)}></input>
                                 <div className={classes.monthFilter}>
                                     Filter by date:
                                     <input type="month"></input>
@@ -27,9 +60,13 @@ const dashboard = () => {
                                 </div>
                             </div>
                         </div>
+                        <ul>
+                            {result.map(symbol => {
+                                return <li key={symbol} onClick={()=>chartChangedHandler(symbol)}>{symbol}</li>
+                            })}
+                        </ul>
                         <div className={classes.chart}>
-                            <div></div>
-                            <div></div>
+                            {chart}
                         </div>
                         <div className={classes.chartChanger}>
                             <div>Chart Type 1</div>
@@ -44,4 +81,4 @@ const dashboard = () => {
     );
 }
 
-export default dashboard;
+export default Dashboard;
