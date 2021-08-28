@@ -11,12 +11,9 @@
 - [Ajay Kumar Yadav](https://github.com/AJAY007L)
 # OHLC Engine
 
-We have created a dashboard based on which users would be
-able to analyze the sentiment of a specific stock. 
+We have created a dashboard based on which users would be able to analyze the sentiment of a specific stock. 
 
-We have used the 'Stock List' dataset which was given to us 
-and used its data to create an "OHLC" (Open/High?Low/Close) 
-engine.
+We have used the 'Stock List' dataset which was given to us and used its data to create an "OHLC" (Open/High/Low/Close) engine.
 
 **Functionalities of the project:**
 - User scan search different stocks based on the symbols and view the chart.
