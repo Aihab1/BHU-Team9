@@ -9,6 +9,8 @@
 - [Aman Kumar](https://github.com/aman0710)
 - [Ishaan Puri](https://github.com/ishu-2201)
 - [Ajay Kumar Yadav](https://github.com/AJAY007L)
+
+
 # OHLC Engine
 
 We have created a dashboard based on which users would be able to analyze the sentiment of a specific stock. 
@@ -18,7 +20,7 @@ We have used the 'Stock List' dataset which was given to us and used its data to
 **Functionalities of the project:**
 - User scan search different stocks based on the symbols and view the chart.
 - Users can view the history of their searches.
-- Users have the ability to switch between OHLC, Candlestick charts, Colored Bar, Vertex Line and Hollow Candle.
+- Users have the ability to switch between OHLC, Candlestick charts, Bar charts and Vertex Line.
 ## Tech Stack
 
 **Client:** HTML, CSS, React.js 
