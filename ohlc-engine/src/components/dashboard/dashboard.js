@@ -7,7 +7,7 @@ import { hashedData } from '../../library/modules/reader/reader'
 
 const Dashboard = () => {
     // Work on hashedData
-    // console.log(hashedData)
+    console.log(hashedData)
     let searchTerms = Object.keys(hashedData)
     const [result, setResult] = useState([]);
     const [chart, setChart] = useState(<div></div>);
@@ -34,13 +34,15 @@ const Dashboard = () => {
         });
     }
 
-    const onTypeHandler = (val) => {
+    const onTypeHandler = (event) => {
+        let val = event.target.value;
         let terms = autocompleteMatch(val);
         let list = [];
         for (let i = 0; i < terms.length; i++) {
             list.push(terms[i]);
         }
         setResult(list);
+        event.target.value = '';
     }
 
     return (
@@ -55,7 +57,7 @@ const Dashboard = () => {
                                 <h1>Good Morning.</h1>
                                 <p>Here's what's going on with stocks today.</p>
                                 <div className={classes.filter}>
-                                    <input placeholder="Search" onChange={(event) => onTypeHandler(event.target.value)}></input>
+                                    <input placeholder="Search" onChange={(event) => onTypeHandler(event)}></input>
                                     <div className={classes.monthFilter}>
                                         Filter by date:
                                         <input type="month"></input>

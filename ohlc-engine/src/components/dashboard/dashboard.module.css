@@ -23,6 +23,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    z-index: 99999;
 }
 
 .innerDiv li:hover {
@@ -91,6 +92,7 @@
 }
 
 .chart div {
+  background-color: white;
   height: 400px;
   border-radius: 5px;
   margin: 0 5px;
