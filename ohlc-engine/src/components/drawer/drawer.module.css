@@ -24,10 +24,14 @@
 .tab {
     padding: 10px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: flex-start;
     background: #233554;
     margin: 5px 0;
     border-left: 2px solid #64ffda;
+    max-height: 200px;
+    overflow-y: auto;
 }
 
 

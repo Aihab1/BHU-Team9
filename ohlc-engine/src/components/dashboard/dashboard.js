@@ -3,7 +3,7 @@ import Drawer from "../drawer/drawer";
 import Navbar from "../navbar/navbar";
 import * as classes from "./dashboard.module.css";
 import { hashedData } from "../../library/modules/reader/reader";
-import ChartComponent from "../Chart/index.js";
+import ChartComponent from "../chart/index.js";
 const Dashboard = () => {
   // Work on hashedData
   let searchTerms = Object.keys(hashedData);
@@ -12,7 +12,7 @@ const Dashboard = () => {
   const [searchHistory, setSearchHistory] = useState([]);
 
   const chartChangedHandler = (symbol) => {
-    setSearchHistory(...searchHistory, symbol);
+    setSearchHistory([...searchHistory, symbol]);
     // Work with symbol like this
     setChart(<ChartComponent hashedData={hashedData[symbol]} />);
   };
@@ -78,21 +78,14 @@ const Dashboard = () => {
               </ul>
               <div className={classes.chart}>{chart}</div>
               <div className={classes.chartChanger}>
-                <div>Chart Type 1</div>
-                <div>Chart Type 2</div>
-                <div>Chart Type 3</div>
-                <div>Chart Type 4</div>
+                <div>CandleStick</div>
+                <div>OHLC</div>
+                <div>Bar Chart</div>
+                <div>Vertex Line</div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div className={classes.chart}></div>
-      <div className={classes.chartChanger}>
-        <div>Chart Type 1</div>
-        <div>Chart Type 2</div>
-        <div>Chart Type 3</div>
-        <div>Chart Type 4</div>
       </div>
     </div>
   );
