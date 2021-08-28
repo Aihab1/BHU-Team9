@@ -1,101 +1,100 @@
 .outerDiv {
-    height: 100%;
-    position: relative;
+  height: 100%;
+  position: relative;
 }
 
-.dashboard{
-    min-height: 100vh;
-    width: 100%;
-    background: #112240;
-    padding-left: 300px;
+.dashboard {
+  min-height: 100vh;
+  width: 100%;
+  background: #112240;
+  padding-left: 300px;
 }
 
 .innerDash {
-    color: white;
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
-    padding: 15px;
+  color: white;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  padding: 15px;
 }
 
 .innerDiv {
-    height: 100%;
+  height: 100%;
 }
 
 .innerDiv input {
-    outline: none;
-    border: 2px solid #64ffda;
-    padding: 5px 15px;
-    font-size: 1.2rem;
-    background: none;
-    border-radius: 5px;
-    color: #e6f1ff;
-    margin-top: 10px;
+  outline: none;
+  border: 2px solid #64ffda;
+  padding: 5px 15px;
+  font-size: 1.2rem;
+  background: none;
+  border-radius: 5px;
+  color: #e6f1ff;
+  margin-top: 10px;
 }
 
 .infoButtons {
-    margin: 0 5px;
+  margin: 0 5px;
 }
 
 .filter {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .monthFilter input {
-    color: white;
-    margin-left: 15px;
-    width: 200px;
-    font-size: 1rem;
+  color: white;
+  margin-left: 15px;
+  width: 200px;
+  font-size: 1rem;
 }
 
 .monthFilter input:nth-child(1) {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 .chart {
-    margin: 30px 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 30px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .chart div {
-    height: 400px;
-    border-radius: 5px;
-    margin: 0 5px;
-    border: 2px solid white;
-    
+  height: 400px;
+  border-radius: 5px;
+  margin: 0 5px;
+  border: 2px solid white;
 }
 
 .chart div:nth-child(1) {
-    width: 70%;
-    background: url('https://www.investopedia.com/thmb/CN7h_iLhFKNT_ZD_NGxbeDoCHLQ=/1787x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/dotdash_Final_OHLC_Chart_Jun_2020-01-433fcf5281e64bfb8e72e2bfedd16757.jpg');
-    background-size: 100%;
+  width: 100%;
+  background: url("https://www.investopedia.com/thmb/CN7h_iLhFKNT_ZD_NGxbeDoCHLQ=/1787x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/dotdash_Final_OHLC_Chart_Jun_2020-01-433fcf5281e64bfb8e72e2bfedd16757.jpg");
+  background-size: 100%;
 }
 .chart div:nth-child(2) {
-    width: 30%;
-    background: url('https://help.syncfusion.com/flutter/circular-charts/chart-types/circular-chart-types-images/pie.jpg');
-    background-size: 100%;
+  width: 30%;
+  /* background: url("https://help.syncfusion.com/flutter/circular-charts/chart-types/circular-chart-types-images/pie.jpg"); */
+  background-size: 100%;
 }
 
 .chartChanger {
-    display: flex;
-    margin: 0 5px;
+  display: flex;
+  margin: 0 5px;
 }
 
 .chartChanger div {
-    margin-right: 15px;
-    border: 2px solid #64ffda;
-    padding: 5px 15px;
-    background: none;
-    border-radius: 5px;
-    color: #e6f1ff;
+  margin-right: 15px;
+  border: 2px solid #64ffda;
+  padding: 5px 15px;
+  background: none;
+  border-radius: 5px;
+  color: #e6f1ff;
 }
 
 .chartChanger div:hover {
-    background: #0a192f;
-    cursor: pointer;
+  background: #0a192f;
+  cursor: pointer;
 }
