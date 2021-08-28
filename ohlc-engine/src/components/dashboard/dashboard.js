@@ -78,9 +78,25 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
+              </div>
             </div>
+            <div className={classes.chart}>
+              <ChartComponent />
+              {console.log(hashedData)}
+              {/* <div></div> */}
+              {/* <div></div> */}
+            </div>
+            <div className={classes.chartChanger}>
+              <div>Chart Type 1</div>
+              <div>Chart Type 2</div>
+              <div>Chart Type 3</div>
+              <div>Chart Type 4</div>
+            </div>
+          </div>
         </div>
-    );
-}
+      </div>
+    </div>
+  );
+};
 
-export default Dashboard;
+export default dashboard;
