@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Drawer from '../drawer/drawer'
 import Navbar from '../navbar/navbar'
+import ChartComponent from '../chart/Chart'
 import * as classes from './dashboard.module.css'
 import { hashedData } from '../../library/modules/reader/reader'
 
@@ -43,60 +44,46 @@ const Dashboard = () => {
     }
 
     return (
-        <div className={classes.outerDiv}>
-            <Drawer searchHistory={searchHistory}/>
-            <div className={classes.dashboard}>
-                <Navbar />
-                <div className={classes.innerDash}>
-                    <div className={classes.innerDiv}>
-                        <div className={classes.infoButtons}>
-                            <h1>Good Morning.</h1>
-                            <p>Here's what's going on with stocks today.</p>
-                            <div className={classes.filter}>
-                                <input placeholder="Search" onChange={(event) => onTypeHandler(event.target.value)}></input>
-                                <div className={classes.monthFilter}>
-                                    Filter by date:
-                                    <input type="month"></input>
-                                    to
-                                    <input type="month"></input>
+        <div>
+            <div className={classes.outerDiv}>
+                <Drawer searchHistory={searchHistory} />
+                <div className={classes.dashboard}>
+                    <Navbar />
+                    <div className={classes.innerDash}>
+                        <div className={classes.innerDiv}>
+                            <div className={classes.infoButtons}>
+                                <h1>Good Morning.</h1>
+                                <p>Here's what's going on with stocks today.</p>
+                                <div className={classes.filter}>
+                                    <input placeholder="Search" onChange={(event) => onTypeHandler(event.target.value)}></input>
+                                    <div className={classes.monthFilter}>
+                                        Filter by date:
+                                        <input type="month"></input>
+                                        to
+                                        <input type="month"></input>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <ul>
-                            {result.map(symbol => {
-                                return <li key={symbol} onClick={()=>chartChangedHandler(symbol)}>{symbol}</li>
-                            })}
-                        </ul>
-                        <div className={classes.chart}>
-                            {chart}
-                        </div>
-                        <div className={classes.chartChanger}>
-                            <div>Chart Type 1</div>
-                            <div>Chart Type 2</div>
-                            <div>Chart Type 3</div>
-                            <div>Chart Type 4</div>
+                            <ul>
+                                {result.map(symbol => {
+                                    return <li key={symbol} onClick={() => chartChangedHandler(symbol)}>{symbol}</li>
+                                })}
+                            </ul>
+                            <div className={classes.chart}>
+                                {chart}
+                            </div>
+                            <div className={classes.chartChanger}>
+                                <div>Chart Type 1</div>
+                                <div>Chart Type 2</div>
+                                <div>Chart Type 3</div>
+                                <div>Chart Type 4</div>
+                            </div>
                         </div>
                     </div>
                 </div>
-              </div>
             </div>
-            <div className={classes.chart}>
-              <ChartComponent />
-              {console.log(hashedData)}
-              {/* <div></div> */}
-              {/* <div></div> */}
-            </div>
-            <div className={classes.chartChanger}>
-              <div>Chart Type 1</div>
-              <div>Chart Type 2</div>
-              <div>Chart Type 3</div>
-              <div>Chart Type 4</div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
   );
 };
 
-export default dashboard;
+export default Dashboard;
