@@ -12,7 +12,6 @@
 
 
 # OHLC Engine
-![Logo](https://ibb.co/7YLZbhN)
 We have created a dashboard based on which users would be able to analyze the sentiment of a specific stock. 
 
 We have used the 'Stock List' dataset which was given to us and used its data to create an "OHLC" (Open/High/Low/Close) engine.
