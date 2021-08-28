@@ -1,4 +1,4 @@
-const stockData = require('../../../srv/stocks.json')
+const stockData = require("../../../srv/stocks.json");
 
 let hashedData = {};
 
@@ -11,5 +11,5 @@ stockData.forEach((stock) => {
 })
 
 module.exports = {
-    hashedData: hashedData
-}
+  hashedData: hashedData,
+};
