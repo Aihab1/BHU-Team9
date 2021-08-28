@@ -3,11 +3,38 @@
   position: relative;
 }
 
-.dashboard {
-  min-height: 100vh;
-  width: 100%;
-  background: #112240;
-  padding-left: 300px;
+.innerDiv ul {
+    list-style: none;
+    position: absolute;
+    top: 140px;
+    left: 5px;
+    background: #0a192f;
+    width: 250px;
+    color: white;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.innerDiv li {
+    background: #233554;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.innerDiv li:hover {
+    background: #0a192f;
+    opacity: 0.8;
+}
+
+.dashboard{
+    min-height: 100vh;
+    width: 100%;
+    background: #112240;
+    padding-left: 300px;
 }
 
 .innerDash {
@@ -19,7 +46,8 @@
 }
 
 .innerDiv {
-  height: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .innerDiv input {
@@ -55,11 +83,11 @@
 }
 
 .chart {
-  margin: 30px 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .chart div {
